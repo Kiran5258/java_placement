@@ -1,3 +1,32 @@
+// ✅ Sample Input:
+// Copy
+// Edit
+// 3 3
+// 1 2 3
+// 4 5 6
+// 7 8 9
+// ✅ Sample Output:
+// mathematica
+// Copy
+// Edit
+// 1 2 3 
+// 4 5 6 
+// 7 8 9 
+// Sum of row 0 = 6
+// Sum of row 1 = 15
+// Sum of row 2 = 24
+// Sum of col 0 = 12
+// Sum of col 1 = 15
+// Sum of col 2 = 18
+// 24
+// 🧠 Explanation:
+// Row sums: 6, 15, 24
+
+// Column sums: 12, 15, 18
+
+// Maximum among all: 24
+
+
 import java.util.*;
 public class Sumrowsumcolmax{
     public static void main(String[]args){
