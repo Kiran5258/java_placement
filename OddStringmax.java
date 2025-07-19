@@ -25,5 +25,6 @@ public class OddStringmax {
         else{
             System.out.println("Better luck next time");
         }
+        sc.close();
     }
 }
