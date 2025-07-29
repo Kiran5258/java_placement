@@ -10,7 +10,7 @@ class NumberSystem{
     public static void main(String[]args){
         Scanner sc=new Scanner(System.in);
         int number=sc.nextInt();
-        DecimaltoBinary(number);
+        DecimaltoOctal(number);
     }
     static void BinarytoDecimal(int num){
         int power=0,sum=0,digit=0;
@@ -31,5 +31,15 @@ class NumberSystem{
             num/=2;
         }
         System.out.println(sb);
+    }
+    static void DecimaltoOctal(int num){
+        int power=0,sum=0,digit=1;
+        while(num!=0){
+            digit=num%10;
+            digit*=Math.pow(8,power++);
+            sum+=digit;
+            num/=10;
+        }
+        System.out.println(sum);
     }
 }
