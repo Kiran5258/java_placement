@@ -10,7 +10,7 @@ class NumberSystem{
     public static void main(String[]args){
         Scanner sc=new Scanner(System.in);
         int number=sc.nextInt();
-        DecimaltoOctal(number);
+        DecimaltohexDecimal(number);
     }
     static void BinarytoDecimal(int num){
         int power=0,sum=0,digit=0;
@@ -33,13 +33,22 @@ class NumberSystem{
         System.out.println(sb);
     }
     static void DecimaltoOctal(int num){
-        int power=0,sum=0,digit=1;
+          StringBuilder sb=new StringBuilder();
         while(num!=0){
-            digit=num%10;
-            digit*=Math.pow(8,power++);
-            sum+=digit;
-            num/=10;
+            int reminder=num%8;
+            sb.append(reminder);
+            num=num/8;
         }
-        System.out.println(sum);
+        System.out.println(sb.reverse());
+    }
+    static void DecimaltohexDecimal(int num){
+        StringBuilder sb=new StringBuilder();
+        while(num!=0){
+            int hexa=num%16;
+            char ch=(char)(hexa+55);
+            if(hexa<=9)sb.append(hexa);
+            else sb.append(ch);
+            System.out.println(sb.reverse());
+        }
     }
 }
