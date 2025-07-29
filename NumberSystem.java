@@ -10,7 +10,7 @@ class NumberSystem{
     public static void main(String[]args){
         Scanner sc=new Scanner(System.in);
         int number=sc.nextInt();
-        BinarytoDecimal(number);
+        DecimaltoBinary(number);
     }
     static void BinarytoDecimal(int num){
         int power=0,sum=0,digit=0;
@@ -22,5 +22,14 @@ class NumberSystem{
             num/=10;
         }
         System.out.println(sum);
+    }
+    static void DecimaltoBinary(int num){
+        StringBuilder sb=new StringBuilder();
+        while(num!=0){
+            if(num%2==0)sb.append(0);
+            else sb.append(1);
+            num/=2;
+        }
+        System.out.println(sb);
     }
 }
